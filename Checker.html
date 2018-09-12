@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CheckUpCase</title>
+</head>
+<body>
+<input id="input" type="text" value="" placeholder="Enter word need to check" align="center">
+<script>
+    let regexp = /^[a-z]/;
+    document.getElementById("input").addEventListener("keydown",function (e) {
+        if (e.key === "Enter"){
+            console.log(e.key);
+            let str = document.getElementById("input").value;
+            if (regexp.test(str)) {
+                alert("String's first character is not uppercase");
+            } else {
+                alert("String's first character is uppercase");
+            }
+            document.getElementById("input").value = "";
+        }
+    })
+</script>
+</body>
+</html>
